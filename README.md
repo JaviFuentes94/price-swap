@@ -82,7 +82,7 @@ Check your current settings anytime
 2. **Manual Installation** (Developer Mode)
    ```bash
    # Clone this repository
-   git clone https://github.com/YOUR_USERNAME/price-swap.git
+   git clone https://github.com/JaviFuentes94/price-swap.git
    
    # Open Chrome and go to chrome://extensions/
    # Enable "Developer mode"
@@ -269,7 +269,7 @@ Contributions are welcome! Here's how you can help:
 ### Development Setup
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/price-swap.git
+git clone https://github.com/JaviFuentes94/price-swap.git
 
 # Load in Chrome
 # 1. Open chrome://extensions/
@@ -300,8 +300,8 @@ If you find Price Swap useful, please:
 
 Found a bug? Have a suggestion? 
 
-- 🐛 [Open an Issue](https://github.com/YOUR_USERNAME/price-swap/issues)
-- 💬 [Start a Discussion](https://github.com/YOUR_USERNAME/price-swap/discussions)
+- 🐛 [Open an Issue](https://github.com/JaviFuentes94/price-swap/issues)
+- 💬 [Start a Discussion](https://github.com/JaviFuentes94/price-swap/discussions)
 
 ---
 
@@ -309,6 +309,6 @@ Found a bug? Have a suggestion?
 
 ### Made with ❤️ for international shoppers and travelers
 
-**[Install Now](#) • [View Demo](#) • [Report Issue](https://github.com/YOUR_USERNAME/price-swap/issues)**
+**[Install Now](#) • [View Demo](#) • [Report Issue](https://github.com/JaviFuentes94/price-swap/issues)**
 
 </div>
