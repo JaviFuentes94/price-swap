@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Price Swap - Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>💱 Price Swap Settings</h1>
+      <p class="subtitle">Configure your preferred currency for price conversions</p>
+    </div>
+
+    <div class="settings-card">
+      <div class="setting-group">
+        <label for="currency-select">Preferred Currency</label>
+        <select id="currency-select" class="currency-select">
+          <optgroup label="Major Currencies">
+            <option value="USD">🇺🇸 US Dollar (USD)</option>
+            <option value="EUR">🇪🇺 Euro (EUR)</option>
+            <option value="GBP">🇬🇧 British Pound (GBP)</option>
+            <option value="JPY">🇯🇵 Japanese Yen (JPY)</option>
+          </optgroup>
+          <optgroup label="European Currencies">
+            <option value="CHF">🇨� Swiss Franc (CHF)</option>
+            <option value="NOK">🇳🇴 Norwegian Krone (NOK)</option>
+            <option value="SEK">🇸🇪 Swedish Krona (SEK)</option>
+            <option value="DKK">🇩🇰 Danish Krone (DKK)</option>
+            <option value="PLN">🇵🇱 Polish Zloty (PLN)</option>
+            <option value="CZK">🇨🇿 Czech Koruna (CZK)</option>
+            <option value="HUF">�🇺 Hungarian Forint (HUF)</option>
+            <option value="RON">🇷🇴 Romanian Leu (RON)</option>
+            <option value="BGN">🇧🇬 Bulgarian Lev (BGN)</option>
+            <option value="HRK">🇭🇷 Croatian Kuna (HRK)</option>
+            <option value="ISK">�� Icelandic Króna (ISK)</option>
+            <option value="TRY">🇹🇷 Turkish Lira (TRY)</option>
+            <option value="RUB">🇷🇺 Russian Ruble (RUB)</option>
+            <option value="UAH">🇺🇦 Ukrainian Hryvnia (UAH)</option>
+          </optgroup>
+          <optgroup label="Other Currencies">
+            <option value="CAD">🇨🇦 Canadian Dollar (CAD)</option>
+            <option value="AUD">🇦🇺 Australian Dollar (AUD)</option>
+            <option value="CNY">🇨🇳 Chinese Yuan (CNY)</option>
+            <option value="INR">🇮🇳 Indian Rupee (INR)</option>
+            <option value="MXN">🇲🇽 Mexican Peso (MXN)</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div class="info-box">
+        <p><strong>How to use:</strong></p>
+        <ul>
+          <li>Select any price on any webpage</li>
+          <li>Price Swap will automatically detect and convert it</li>
+          <li>Supports multiple currency formats and symbols</li>
+        </ul>
+      </div>
+
+      <button id="save-button" class="save-button">Save Settings</button>
+      
+      <div id="status-message" class="status-message"></div>
+    </div>
+
+    <div class="footer">
+      <p>Price Swap uses real-time exchange rates</p>
+      <p class="version">Version 1.0.0</p>
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="128" height="128" rx="24" fill="white"/>
+  
+  <!-- Dollar symbol -->
+  <g transform="translate(35, 64)">
+    <!-- Vertical line -->
+    <line x1="0" y1="-24" x2="0" y2="24" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round"/>
+    <!-- S shape -->
+    <path d="M -10,-15 Q -10,-20 -5,-20 Q 0,-20 5,-20 Q 10,-20 10,-14 Q 10,-8 5,-6 L -5,-3 Q -10,-1 -10,5 Q -10,11 -5,11 Q 0,11 5,11 Q 10,11 10,5" 
+          stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  
+  <!-- Arrow -->
+  <g transform="translate(64, 64)">
+    <path d="M -10,0 L 10,0 M 5,-5 L 10,0 L 5,5" 
+          stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  
+  <!-- Euro symbol -->
+  <g transform="translate(93, 64)">
+    <!-- C shape -->
+    <path d="M 10,-12 Q 6,-18 0,-18 Q -8,-18 -10,-10 Q -12,-2 -10,6 Q -8,14 0,14 Q 6,14 10,8" 
+          stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <!-- Horizontal lines -->
+    <line x1="-12" y1="-6" x2="4" y2="-6" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-12" y1="2" x2="4" y2="2" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+# Exclude development and test files
+tests.html
+test-runner.js
+screenshots/promo/generate-promo.html
+icons/generate-icons.html
+icons/README.md
+PUBLISHING.md
+price-swap.zip
+
+# Exclude system files
+.DS_Store
+*.log
+
+# Keep screenshots but exclude originals if resized exist
+screenshots/*.png

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Price Swap</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <div class="header">
+      <h1>💱 Price Swap</h1>
+      <p class="tagline">Convert prices instantly</p>
+    </div>
+
+    <div class="current-settings">
+      <div class="setting-label">Current Currency:</div>
+      <div id="current-currency" class="currency-display">Loading...</div>
+    </div>
+
+    <div class="instructions">
+      <h3>How to use:</h3>
+      <ol>
+        <li>Select any price on a webpage</li>
+        <li>See instant conversion to your currency</li>
+        <li>Change your preferred currency in settings</li>
+      </ol>
+    </div>
+
+    <div class="actions">
+      <button id="settings-button" class="button primary">
+        ⚙️ Settings
+      </button>
+    </div>
+
+    <div class="footer">
+      <p class="footer-text">Real-time exchange rates</p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
