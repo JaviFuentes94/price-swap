@@ -278,6 +278,16 @@ git clone https://github.com/JaviFuentes94/price-swap.git
 # 4. Select the price-swap folder
 ```
 
+### Building for Distribution
+```bash
+# Run the build script to create a production-ready bundle
+./build.sh
+
+# This will create price-swap.zip ready for Chrome Web Store upload
+# The script automatically excludes development files and includes only
+# necessary files for distribution
+```
+
 ---
 
 ## 📝 License
