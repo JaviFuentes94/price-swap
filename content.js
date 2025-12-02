@@ -32,30 +32,31 @@ const DOMAIN_CURRENCY_MAP = {
 };
 
 // Currency symbols and patterns
+// Supports both comma and period as decimal separators
 const CURRENCY_PATTERNS = {
-    USD: { symbols: ['$', 'USD', 'US$'], regex: /\$\s*(\d+(?:,\d{3})*(?:\.\d{2})?)|(\d+(?:,\d{3})*(?:\.\d{2})?)\s*USD/i },
-    EUR: { symbols: ['€', 'EUR'], regex: /€\s*(\d+(?:,\d{3})*(?:\.\d{2})?)|(\d+(?:,\d{3})*(?:\.\d{2})?)\s*EUR/i },
-    GBP: { symbols: ['£', 'GBP'], regex: /£\s*(\d+(?:,\d{3})*(?:\.\d{2})?)|(\d+(?:,\d{3})*(?:\.\d{2})?)\s*GBP/i },
-    CHF: { symbols: ['CHF', 'Fr'], regex: /CHF\s*(\d+(?:,\d{3})*(?:\.\d{2})?)|(\d+(?:,\d{3})*(?:\.\d{2})?)\s*CHF/i },
-    NOK: { symbols: ['kr', 'NOK'], regex: /(\d+(?:,\d{3})*(?:\.\d{2})?)\s*kr|(\d+(?:,\d{3})*(?:\.\d{2})?)\s*NOK/i },
-    SEK: { symbols: ['kr', 'SEK'], regex: /(\d+(?:,\d{3})*(?:\.\d{2})?)\s*kr|(\d+(?:,\d{3})*(?:\.\d{2})?)\s*SEK/i },
-    DKK: { symbols: ['kr', 'DKK'], regex: /(\d+(?:,\d{3})*(?:\.\d{2})?)\s*kr|(\d+(?:,\d{3})*(?:\.\d{2})?)\s*DKK/i },
-    PLN: { symbols: ['zł', 'PLN'], regex: /(\d+(?:,\d{3})*(?:\.\d{2})?)\s*zł|(\d+(?:,\d{3})*(?:\.\d{2})?)\s*PLN/i },
-    CZK: { symbols: ['Kč', 'CZK'], regex: /(\d+(?:,\d{3})*(?:\.\d{2})?)\s*Kč|(\d+(?:,\d{3})*(?:\.\d{2})?)\s*CZK/i },
-    HUF: { symbols: ['Ft', 'HUF'], regex: /(\d+(?:,\d{3})*(?:\.\d{2})?)\s*Ft|(\d+(?:,\d{3})*(?:\.\d{2})?)\s*HUF/i },
-    RON: { symbols: ['lei', 'RON'], regex: /(\d+(?:,\d{3})*(?:\.\d{2})?)\s*lei|(\d+(?:,\d{3})*(?:\.\d{2})?)\s*RON/i },
-    BGN: { symbols: ['лв', 'BGN'], regex: /(\d+(?:,\d{3})*(?:\.\d{2})?)\s*лв|(\d+(?:,\d{3})*(?:\.\d{2})?)\s*BGN/i },
-    HRK: { symbols: ['kn', 'HRK'], regex: /(\d+(?:,\d{3})*(?:\.\d{2})?)\s*kn|(\d+(?:,\d{3})*(?:\.\d{2})?)\s*HRK/i },
-    ISK: { symbols: ['kr', 'ISK'], regex: /(\d+(?:,\d{3})*(?:\.\d{2})?)\s*ISK/i },
-    TRY: { symbols: ['₺', 'TRY'], regex: /₺\s*(\d+(?:,\d{3})*(?:\.\d{2})?)|(\d+(?:,\d{3})*(?:\.\d{2})?)\s*TRY/i },
-    RUB: { symbols: ['₽', 'RUB'], regex: /₽\s*(\d+(?:,\d{3})*(?:\.\d{2})?)|(\d+(?:,\d{3})*(?:\.\d{2})?)\s*RUB/i },
-    UAH: { symbols: ['₴', 'UAH'], regex: /₴\s*(\d+(?:,\d{3})*(?:\.\d{2})?)|(\d+(?:,\d{3})*(?:\.\d{2})?)\s*UAH/i },
-    JPY: { symbols: ['¥', 'JPY'], regex: /¥\s*(\d+(?:,\d{3})*)|(\d+(?:,\d{3})*)\s*JPY/i },
-    CAD: { symbols: ['CAD', 'C$', 'CA$'], regex: /C\$\s*(\d+(?:,\d{3})*(?:\.\d{2})?)|(\d+(?:,\d{3})*(?:\.\d{2})?)\s*CAD/i },
-    AUD: { symbols: ['AUD', 'A$', 'AU$'], regex: /A\$\s*(\d+(?:,\d{3})*(?:\.\d{2})?)|(\d+(?:,\d{3})*(?:\.\d{2})?)\s*AUD/i },
-    CNY: { symbols: ['¥', 'CNY', 'RMB'], regex: /(\d+(?:,\d{3})*(?:\.\d{2})?)\s*CNY|(\d+(?:,\d{3})*(?:\.\d{2})?)\s*RMB/i },
-    INR: { symbols: ['₹', 'INR'], regex: /₹\s*(\d+(?:,\d{3})*(?:\.\d{2})?)|(\d+(?:,\d{3})*(?:\.\d{2})?)\s*INR/i },
-    MXN: { symbols: ['MXN', 'MX$'], regex: /MX\$\s*(\d+(?:,\d{3})*(?:\.\d{2})?)|(\d+(?:,\d{3})*(?:\.\d{2})?)\s*MXN/i }
+    USD: { symbols: ['$', 'USD', 'US$'], regex: /\$\s*(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)|(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*USD/i },
+    EUR: { symbols: ['€', 'EUR'], regex: /€\s*(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)|(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*EUR/i },
+    GBP: { symbols: ['£', 'GBP'], regex: /£\s*(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)|(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*GBP/i },
+    CHF: { symbols: ['CHF', 'Fr'], regex: /CHF\s*(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)|(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*CHF/i },
+    NOK: { symbols: ['kr', 'NOK'], regex: /(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*kr\.?|(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*NOK/i },
+    SEK: { symbols: ['kr', 'SEK'], regex: /(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*kr\.?|(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*SEK/i },
+    DKK: { symbols: ['kr', 'DKK'], regex: /(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*kr\.?|(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*DKK/i },
+    PLN: { symbols: ['zł', 'PLN'], regex: /(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*zł|(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*PLN/i },
+    CZK: { symbols: ['Kč', 'CZK'], regex: /(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*Kč|(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*CZK/i },
+    HUF: { symbols: ['Ft', 'HUF'], regex: /(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*Ft|(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*HUF/i },
+    RON: { symbols: ['lei', 'RON'], regex: /(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*lei|(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*RON/i },
+    BGN: { symbols: ['лв', 'BGN'], regex: /(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*лв|(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*BGN/i },
+    HRK: { symbols: ['kn', 'HRK'], regex: /(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*kn|(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*HRK/i },
+    ISK: { symbols: ['kr', 'ISK'], regex: /(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*ISK/i },
+    TRY: { symbols: ['₺', 'TRY'], regex: /₺\s*(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)|(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*TRY/i },
+    RUB: { symbols: ['₽', 'RUB'], regex: /₽\s*(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)|(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*RUB/i },
+    UAH: { symbols: ['₴', 'UAH'], regex: /₴\s*(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)|(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*UAH/i },
+    JPY: { symbols: ['¥', 'JPY'], regex: /¥\s*(\d+(?:[.,]\d{3})*)|(\d+(?:[.,]\d{3})*)\s*JPY/i },
+    CAD: { symbols: ['CAD', 'C$', 'CA$'], regex: /C\$\s*(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)|(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*CAD/i },
+    AUD: { symbols: ['AUD', 'A$', 'AU$'], regex: /A\$\s*(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)|(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*AUD/i },
+    CNY: { symbols: ['¥', 'CNY', 'RMB'], regex: /(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*CNY|(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*RMB/i },
+    INR: { symbols: ['₹', 'INR'], regex: /₹\s*(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)|(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*INR/i },
+    MXN: { symbols: ['MXN', 'MX$'], regex: /MX\$\s*(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)|(\d+(?:[.,]\d{3})*(?:[.,]\d{2})?)\s*MXN/i }
 };
 
 // Listen for text selection
@@ -113,8 +114,20 @@ function detectPrice(text) {
     for (const [currency, pattern] of Object.entries(CURRENCY_PATTERNS)) {
         const match = text.match(pattern.regex);
         if (match) {
-            // Extract the numeric value
-            const numericValue = (match[1] || match[2]).replace(/,/g, '');
+            // Extract the numeric value and normalize it
+            let numericValue = match[1] || match[2];
+
+            // Determine if comma is decimal separator or thousands separator
+            // If comma is followed by exactly 2 digits at the end, it's likely a decimal separator
+            // If comma is followed by 3 digits (and possibly more groups), it's a thousands separator
+            if (/,\d{2}$/.test(numericValue) && !/,\d{3}/.test(numericValue)) {
+                // European format: comma as decimal separator (e.g., "534,00")
+                numericValue = numericValue.replace(/\./g, '').replace(',', '.');
+            } else {
+                // US/UK format: comma as thousands separator (e.g., "1,234.56")
+                numericValue = numericValue.replace(/,/g, '');
+            }
+
             const amount = parseFloat(numericValue);
 
             if (!isNaN(amount) && amount > 0) {
