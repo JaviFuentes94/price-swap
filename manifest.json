@@ -4,8 +4,7 @@
     "version": "1.0.0",
     "description": "Automatically converts prices to your preferred currency when you select them",
     "permissions": [
-        "storage",
-        "activeTab"
+        "storage"
     ],
     "host_permissions": [
         "https://api.exchangerate-api.com/*"

@@ -57,11 +57,11 @@ The extension makes anonymous API requests to `api.exchangerate-api.com` to fetc
 ### Storage Permission
 Used to save your preferred currency and cache exchange rates locally on your device.
 
-### ActiveTab Permission
-Used to read text that you manually select on webpages to detect prices. Only activates when you select text.
-
 ### Host Permission (api.exchangerate-api.com)
 Used to fetch current exchange rates for accurate currency conversion.
+
+### Content Scripts
+The extension uses content scripts that run on webpages to detect when you manually select text containing prices. These scripts only activate when you select text and only process the selected text to check for price information.
 
 ## Your Rights
 
